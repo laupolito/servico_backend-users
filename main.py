@@ -2,7 +2,7 @@ import uvicorn
 
 
 from fastapi import FastAPI
-from route_users import router as produto_router
+from route_users import router as users_router
 
 
 app = FastAPI()
@@ -16,7 +16,7 @@ def link():
 def health_check():
     return True
 
-app.include_router(produto_router)
+app.include_router(users_router)
 
 
 if __name__ == "__main__":
